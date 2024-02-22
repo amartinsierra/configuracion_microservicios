@@ -2,7 +2,7 @@ spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     password: root
-    url: jdbc:mysql://localhost:3306/tiendaVirtual
+    url: jdbc:mysql://${HOST_DB}:3306/tiendaVirtual
     username: root
   jpa:
     hibernate:
@@ -11,7 +11,7 @@ spring:
         physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
 eureka:
   client:
-    service-url:
-      default-zone: http://localhost:8761/eureka
+    serviceUrl:
+      defaultZone: http://${HOST_EUREKA}:8761/eureka
 server:
   port: 8000
